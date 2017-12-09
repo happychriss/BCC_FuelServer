@@ -1,0 +1,24 @@
+{
+  "name": "bc_fs",
+  "version": "1.0.0",
+  "description": "BC Fuel Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "DEBUG=express* node index.js"
+  },
+  "author": "cn",
+  "license": "ISC",
+  "devDependencies": {
+    "npm": "^5.5.1",
+    "bower": "^1.7.7",
+    "http-server": "^0.9.0",
+    "express": "^4.16.27",
+    "request-promise": "^4.2.2",
+    "express-handlebars": "^3.0.0",
+    "body-parser": "^1.18.2"
+  },
+  "dependencies": {
+    "redis": "^2.8.0"
+  }
+}
