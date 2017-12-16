@@ -8,7 +8,7 @@ const STATUS_CONTRACT = "SENT CONTRACT UPDATE";
 const STATUS_ERROR = "ERROR"
 
 
-var config = require('./wallet_config');
+
 var bodyParser = require('body-parser');
 var store_asset_tx_ser;
 var store_asset_tx;
@@ -42,7 +42,7 @@ var wallet_config = require('./wallet_config.json')
 
 // Wallet Address
 var wallet_address = '0x25a8e4785eEC0C0c4D34Ff52E1259Aa6ce71342f';
-var wallet_key = wallet_config.WALLET_KEY;
+var wallet_key = process.env.WALLET_KEY;
 
 // Hash Main Contract Details ************************
 var contract_address = '0xB943F922bD561A269283D73Ba3d5F5069dD6c9bd';
