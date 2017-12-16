@@ -1,7 +1,7 @@
 /// WebServer Init ******************************************************************************************
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 const STATUS_GET = "GOT REQUEST";
 const STATUS_MONEY = "SENT MONEY";
 const STATUS_CONTRACT = "SENT CONTRACT UPDATE";
