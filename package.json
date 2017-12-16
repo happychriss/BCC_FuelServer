@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "BC Fuel Server",
   "main": "index.js",
+  "version": "16.9.2",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
