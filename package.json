@@ -12,6 +12,7 @@
     "request-promise": "^4.2.2",
     "express-handlebars": "^3.0.0",
     "body-parser": "^1.18.2",
+    "web3-eth-accounts":"^1.0.0-beta.26",
     "web3": "https://github.com/ethereum/ethereum.js.git",
     "eth-lightwallet": "https://github.com/ConsenSys/eth-lightwallet.git",
     "hooked-web3-provider": "https://github.com/ConsenSys/hooked-web3-provider.git",
@@ -19,6 +20,6 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node $NODE_DEBUG_OPTION index.js"
+    "start": "node index.js"
   }
 }
