@@ -38,7 +38,7 @@ var lightwallet = require('eth-lightwallet');
 var Web3EthAccounts = require('web3-eth-accounts');
 var txutils = lightwallet.txutils;
 var Accounts = require('web3-eth-accounts');
-var wallet_config = require('./wallet_config.json')
+
 
 // Wallet Address
 var wallet_address = '0x25a8e4785eEC0C0c4D34Ff52E1259Aa6ce71342f';
