@@ -14,7 +14,7 @@ var store_asset_tx_ser;
 var store_asset_tx;
 
 var redis = require("redis"),
-    client = redis.createClient();
+    client = redis.createClient(process.env.REDIS_URL);
 
 app.use(bodyParser.json());       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
