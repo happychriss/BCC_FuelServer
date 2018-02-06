@@ -41,16 +41,21 @@ var Accounts = require('web3-eth-accounts');
 
 
 // Wallet Address
-var wallet_address = '0x25a8e4785eEC0C0c4D34Ff52E1259Aa6ce71342f';
-var wallet_key = process.env.WALLET_KEY;
+
+// var wallet_address = '0x25a8e4785eEC0C0c4D34Ff52E1259Aa6ce71342f';
+wallet_address = '0x627306090abaB3A6e1400e9345bC60c78a8BEf57';
+// var wallet_key = process.env.WALLET_KEY;
+var wallet_key = 'c87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3'
 
 // Hash Main Contract Details ************************
-var contract_address = '0xB943F922bD561A269283D73Ba3d5F5069dD6c9bd';
+// var contract_address = '0xB943F922bD561A269283D73Ba3d5F5069dD6c9bd';  //address of the old contract
+ var contract_address = '0x345ca3e014aaf5dca488057592ee47305d9b3e10';  //address of the new contract (CopyRight)
 
 
 // Fuel Server Functions ******************************************************************************************
 var web3 = new Web3(
-    new Web3.providers.HttpProvider('https://rinkeby.infura.io/NPDWCn9k71RH5knG9aPt')
+//     new Web3.providers.HttpProvider('https://rinkeby.infura.io/NPDWCn9k71RH5knG9aPt')
+new Web3.providers.HttpProvider('http://localhost:9545')
 );
 
 function sleep(ms) {
@@ -104,7 +109,7 @@ app.post('/api/blockchain1', function (req, res) {
         console.log("Contract "+client_contract+" saved in redis with result:" + reply);
     });
 
-    console.log("Ether in Wallet:" + web3.eth.getBalance('0x25a8e4785eEC0C0c4D34Ff52E1259Aa6ce71342f').toNumber());
+    console.log("Ether in Wallet:" + web3.eth.getBalance(wallet_address).toNumber());
     console.log("Sending money to:" + store_asset_tx.from.toString('hex'));
 
     var rawtx_send_money = {
