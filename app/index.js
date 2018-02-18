@@ -42,20 +42,22 @@ var Accounts = require('web3-eth-accounts');
 
 // Wallet Address
 
-// var wallet_address = '0x25a8e4785eEC0C0c4D34Ff52E1259Aa6ce71342f';
-wallet_address = '0x627306090abaB3A6e1400e9345bC60c78a8BEf57';
-// var wallet_key = process.env.WALLET_KEY;
-var wallet_key = 'c87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3'
+
+// var wallet_address = '0x627306090abaB3A6e1400e9345bC60c78a8BEf57'; local wallet with truffle
+var wallet_address ='0x8B29A9EB2347d52D89F0678dDE0eD033feBdF4A7'; //rinkbey
+var wallet_key = process.env.WALLET_KEY;
+
 
 // Hash Main Contract Details ************************
 // var contract_address = '0xB943F922bD561A269283D73Ba3d5F5069dD6c9bd';  //address of the old contract
- var contract_address = '0x345ca3e014aaf5dca488057592ee47305d9b3e10';  //address of the new contract (CopyRight)
+ var contract_address = '0x345ca3e014aaf5dca488057592ee47305d9b3e10';  //address of the new contract (CopyRight) truffle
+var contract_address = '0x2993adA82373AA0b3A95780E35D21718160Cc974';  //address of the new contract (CopyRight) rinkeby
 
 
 // Fuel Server Functions ******************************************************************************************
 var web3 = new Web3(
-//     new Web3.providers.HttpProvider('https://rinkeby.infura.io/NPDWCn9k71RH5knG9aPt')
-new Web3.providers.HttpProvider('http://localhost:9545')
+    new Web3.providers.HttpProvider('https://rinkeby.infura.io/NPDWCn9k71RH5knG9aPt')
+// new Web3.providers.HttpProvider('http://localhost:9545')
 );
 
 function sleep(ms) {
