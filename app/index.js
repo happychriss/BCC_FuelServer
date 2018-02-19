@@ -50,7 +50,7 @@ var wallet_key = process.env.WALLET_KEY;
 
 // Hash Main Contract Details ************************
 // var contract_address = '0xB943F922bD561A269283D73Ba3d5F5069dD6c9bd';  //address of the old contract
- var contract_address = '0x345ca3e014aaf5dca488057592ee47305d9b3e10';  //address of the new contract (CopyRight) truffle
+// var contract_address = '0x345ca3e014aaf5dca488057592ee47305d9b3e10';  //address of the new contract (CopyRight) truffle
 var contract_address = '0x2993adA82373AA0b3A95780E35D21718160Cc974';  //address of the new contract (CopyRight) rinkeby
 
 
@@ -99,7 +99,7 @@ app.post('/api/blockchain2', function (req, res) {
 });
 
 app.post('/api/blockchain1', function (req, res) {
-
+    console.log("API-Blockchain1";
     store_asset_tx = new Tx(req.body.tx);
     store_asset_tx_ser = store_asset_tx.serialize().toString('hex');
 
@@ -110,7 +110,7 @@ app.post('/api/blockchain1', function (req, res) {
     client.get(client_contract, function (err, reply) {
         console.log("Contract "+client_contract+" saved in redis with result:" + reply);
     });
-
+    console.log("Test Web3:");
     console.log("Ether in Wallet:" + web3.eth.getBalance(wallet_address).toNumber());
     console.log("Sending money to:" + store_asset_tx.from.toString('hex'));
 
