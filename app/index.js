@@ -99,7 +99,7 @@ app.post('/api/blockchain2', function (req, res) {
 });
 
 app.post('/api/blockchain1', function (req, res) {
-    console.log("API-Blockchain1";
+    console.log("API-Blockchain1");
     store_asset_tx = new Tx(req.body.tx);
     store_asset_tx_ser = store_asset_tx.serialize().toString('hex');
 
