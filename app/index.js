@@ -56,7 +56,7 @@ var contract_address = '0x2993adA82373AA0b3A95780E35D21718160Cc974';  //address 
 
 // Fuel Server Functions ******************************************************************************************
 var web3 = new Web3(
-    new Web3.providers.HttpProvider('https://rinkeby.infura.io/NPDWCn9k71RH5knG9aPt')
+    new Web3.providers.HttpProvider('https://rinkeby.infura.io/v3/d89b45652db3453fb6ce55ffb6ec2fae')
 // new Web3.providers.HttpProvider('http://localhost:9545')
 );
 
